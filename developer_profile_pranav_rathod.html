@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pranav Rathod | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!--Creep font hero H1-->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+    }
+    .section{min-height: 100vh;   /* Makes each section take full screen height */
+  display: flex;
+  align-items: center;  /* Vertically centers content */
+  justify-content: center; /* Horizontally centers if needed */
+  padding: 60px 0;  /* Keeps spacing from navbar */}
+
+    .highlight {
+  font-weight: bold;
+  color: #8b0000; /* Dark blood red */
+  text-shadow: 0 0 8px #330000;
+  animation: heartbeat 1.8s infinite ease-in-out;
+}
+
+/* Smooth Vampire Heartbeat */
+@keyframes heartbeat {
+  0%, 100% {
+    color: #8b0000; /* resting dark red */
+    text-shadow: 0 0 8px #330000;
+  }
+  40% {
+    color: #cc0000; /* mid pulse */
+    text-shadow: 0 0 15px #660000, 0 0 25px #990000;
+  }
+  60% {
+    color: #ff0000; /* peak pulse */
+    text-shadow: 0 0 20px #ff1a1a, 0 0 35px #990000;
+  }
+}
+
+
+    /* Navbar */
+   /* Dracula Navbar */
+.navbar {
+  background: #0a0a0a; /* Dark background */
+  box-shadow: 0 0 15px #660000; /* Subtle red glow */
+  transition: background 0.5s ease;
+}
+
+.navbar:hover {
+  background: #1a0000; /* Darker blood tint on hover */
+}
+
+/* Brand name */
+.navbar-brand {
+  font-family: 'Medieval Queen', serif; /* Dracula font */
+  color: #ff0000 !important;
+  text-shadow: 0 0 10px #ff1a1a, 0 0 20px #660000;
+  transition: transform 0.5s ease, text-shadow 0.5s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px #ff3333, 0 0 30px #990000;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 25px; /* Adjust spacing between items */
+  font-weight: bold;
+}
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #cccccc !important;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+/* Hover effect: blood underline */
+.navbar-nav .nav-link::after {
+  
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ff0000;
+  box-shadow: 0 0 8px #ff1a1a;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff0000 !important;
+  text-shadow: 0 0 5px #660000;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+
+    /* Hero */
+   /* Hero Section Dracula Theme */
+.hero {
+  background: #0a0a0a; /* Dark gothic background */
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;   /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; /* for snapping effect */
+}
+
+
+/* Vampire Name */
+.vampire-name {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 3.5rem;
+}
+
+/* Normal Font */
+.vampire-name .normal {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  transition: opacity 1.5s ease;
+}
+
+/* Dracula Font (hidden by default) */
+.vampire-name .dracula {
+  font-family: 'Times New Roman', Times, serif;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff1a1a, 0 0 25px #660000, 0 0 40px #ff0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* On Hover → Dracula fades in */
+.vampire-name:hover .normal {
+  opacity: 0;
+}
+.vampire-name:hover .dracula {
+  opacity: 1;
+  
+}
+
+
+
+/* Spooky Paragraph */
+.hero p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  font-style: italic;
+  max-width: 700px;
+  margin: 20px auto;
+  text-shadow: 0 0 5px #990000, 0 0 15px #330000;
+  animation: fadeGlow 4s infinite alternate;
+}
+
+/* Button Gothic Style */
+.hero a.btn {
+  background: #660000;
+  border: none;
+  box-shadow: 0 0 15px #ff1a1a;
+  transition: 0.3s ease;
+}
+.hero a.btn:hover {
+  background: #990000;
+  box-shadow: 0 0 25px #ff0000, 0 0 40px #ff3333;
+}
+
+/* Animations */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.4; }
+}
+
+@keyframes fadeGlow {
+  from { text-shadow: 0 0 5px #660000; }
+  to { text-shadow: 0 0 20px #ff0000, 0 0 30px #660000; }
+}
+
+
+    /* Sections */
+    .section {
+      padding: 80px 0;
+    }
+
+    /* About */
+    /* About Section Layout */
+.about {
+  background: #0d0d0d; /* deep black background */
+  color: #f5f5f5;
+  padding: 80px 20px;
+}
+
+.bt {
+  background: #660000;
+  border: none;
+  box-shadow: 0 0 15px #ff1a1a;
+  transition: 0.3s ease;
+}
+.bt:hover {
+  background: #990000;
+  box-shadow: 0 0 25px #ff0000, 0 0 40px #ff3333;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Image Styling */
+.about-image img {
+  width: 280px;
+  height: 400px;
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.4); /* soft red glow */
+  
+  /* Start in darkness */
+  filter: brightness(0.15);
+  transition: filter 3s ease, box-shadow 1.2s ease;
+}
+
+/* On Hover: Reveal from darkness */
+.about-image img:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 0px 35px rgba(127, 1, 1, 0.8);
+}
+
+/* About Info */
+.about-info h2 {
+  color: #ff1a1a;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.about-info p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-info ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.about a{
+  background-color: #660000;
+}
+
+
+    /* Projects */
+    #projects {
+      background: #111;
+      color: #fff;
+    }
+    #projects h2 {
+      color: #ff6666;
+    }
+    .project-card {
+  background: #111; 
+  color: #eee;
+  border: 2px solid #800000; /* blood-red */
+  transition: transform 0.3s ease-in-out;
+}
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(139,0,0,0.7);
+}
+.project-desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 0;
+  margin-top: 10px;
+  color: #ddd;
+  font-style: italic;
+}
+.project-desc.open {
+  max-height: 200px;
+  opacity: 1;
+}
+.toggle-btn {
+  background: #800000;
+  border: none;
+  transition: background 0.3s;
+}
+.toggle-btn:hover {
+  background: #a00000;
+}
+
+
+    /* Contact */
+    #contact {
+      background: linear-gradient(to right, #1a0000, #000000);
+      color: #fff;
+    }
+    #contact h2 {
+      color: #ff6666;
+    }
+    .btn-dark {
+      background: #330000;
+      border: none;
+    }
+    .btn-dark:hover {
+      background: #660000;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Pranav Rathod</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+ <section id="home" class="hero">
+  <h1 class="vampire-name" data-aos="fade-up">
+    <span class="normal">Pranav Rathod</span>
+    <span class="dracula">Pranav Rathod</span>
+  </h1>
+  <p data-aos="fade-up" data-aos-delay="200">
+    A relentless architect of code, as passionate as a vampire’s thirst, who conjures impactful creations from the shadows and hungers eternally for the dark knowledge of new technologies
+  </p>
+  <a href="#projects" class="btn btn-primary btn-lg mt-3" data-aos="zoom-in" data-aos-delay="400">View My Work</a>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container ">
+      <h2 class="text-center mb-5" data-aos="fade-down">About Me</h2>
+      <div class="row align-items-center">
+        <!-- Profile Image -->
+        <div class="col-md-5 text-center about-image" data-aos="fade-right">
+          <img src="https://github.com/PranavTheHunter/Dev-Profile/raw/main/photos/ChatGPT%20Image%20Aug%2013%2C%202025%2C%2002_25_33%20AM.png" 
+               alt="Pranav Rathod" class="img-fluid">
+        </div>
+        <!-- Info -->
+        <div class="col-md-7 about-info" data-aos="fade-left">
+          <h3 class="highlight">Hello, Mortal!</h3>
+          <p class="mt-3">
+            I am <span class="highlight">Pranav Rathod</span>,  
+            a seeker of forbidden knowledge in the dark arts of 
+            <span class="highlight">Python, AI, and full-stack sorcery</span>.  
+            By moonlight, I conjure innovative creations, and by twilight,
+            I guide wandering students through the labyrinth of technology.  
+          </p>
+          <ul class="list-unstyled mt-3">
+            <li><strong>Education:</strong> B.E. in Computer Science</li>
+            <li><strong> Languages:</strong> Python, C++, C, Java,  HTML, CSS and javascript</li>
+            <li><strong>Frameworks:</strong> React.js , Node.js .Tensorlfow, Flask </li>
+            <li><strong>Database:</strong>MongoDB, MySql, SQlite, Oracle</li>
+            <li><strong>Location:</strong> Pune, India</li>
+          </ul>
+          <a href="#projects"  class="btn btn-primary btn-lg mt-3 bt" data-aos="zoom-in" data-aos-delay="400">See My Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+  <div class="container">
+    <h2 class="text-center" data-aos="fade-down">Projects</h2>
+    <div class="row mt-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card shadow-sm project-card">
+          <img src="https://github.com/PranavTheHunter/Dev-Profile/raw/main/photos/emotion_based.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Emotion-based Music Suggestor</h5>
+            <button class="btn btn-dark toggle-btn">See More</button>
+            <div class="project-desc">
+              <p>A system that detects facial expressions and suggests songs accordingly. 
+              Built with Python, Streamlit, and OpenCV.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card shadow-sm project-card">
+          <img src="https://github.com/PranavTheHunter/Dev-Profile/raw/main/photos/virtaul.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Virtual Mouse</h5>
+            <button class="btn btn-dark toggle-btn">See More</button>
+            <div class="project-desc">
+              <p>A hand-gesture controlled virtual mouse using Python & OpenCV. 
+              Eliminates need for hardware peripherals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card shadow-sm project-card">
+          <img src="https://github.com/PranavTheHunter/Dev-Profile/raw/main/photos/real-time.jpeg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Real Time Sign Language Predictor</h5>
+            <button class="btn btn-dark toggle-btn">See More</button>
+            <div class="project-desc">
+              <p>A System capable enough to capture hand signs and predict what it means.
+              Also it converts the sentence into Audio form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container text-center">
+      <h2 data-aos="fade-up">Contact Me</h2>
+      <p class="mt-3" data-aos="fade-up" data-aos-delay="200">Let's connect! Feel free to reach out via email or social media.</p>
+      <a href="mailto:pranavrathod.pr09@gmail.com" class="btn btn-dark" data-aos="zoom-in" data-aos-delay="400">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p>© 2025 Pranav Rathod | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+     document.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+      const desc = this.nextElementSibling;
+      desc.classList.toggle("open");
+      this.textContent = desc.classList.contains("open") ? "Hide" : "See More";
+    });
+  });
+  </script>
+</body>
+</html>
